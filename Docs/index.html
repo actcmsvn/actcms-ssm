@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>ACTCMS - Siêu thị sạch App</title>
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174902584-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-174902584-1');
+</script>
+
+</head>
+
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+    <header class="site-header navbar-transparent">
+        <!-- Top navbar & branding -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Toggle buttons and brand -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                    </button>
+                    <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Tài liệu hướng dẫn</a>
+                </div>
+                <!-- END Toggle buttons and brand -->
+            </div>
+        </nav>
+        <!-- END Top navbar & branding -->
+        <!-- Banner -->
+        <div class="banner auto-size" style="background-color: #5cc7b2">
+            <div class="container text-white">
+                <h1><strong>superS</strong> - Siêu thị sạch App</h1>
+                <h5>Không chỉ là một giao diện, đây là một ứng dụng di động hoàn chỉnh</h5>
+            </div>
+        </div>
+        <!-- END Banner -->
+    </header>
+    <main class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <aside class="col-sm-3 sidebar">
+                <ul class="nav sidenav dropable sticky">
+                    <li><a href="#Installation">Cài đặt</a></li>
+                    <li><a href="#plugin">Các Plugins yêu cầu</a></li>
+                    <li><a href="#run">Chạy ứng dụng</a></li>
+                    <li><a href="#AppChange">Thay đổi giao diện</a></li>
+                    <li><a href="#build">Build APK</a></li>
+                    <li><a href="#download">Demo dành cho Android</a></li>
+                    <li><a href="#mua">Mua ngay</a></li>
+                </ul>
+            </aside>
+            <!-- END Sidebar -->
+            <!-- Main content -->
+            <article class="col-sm-9 main-content" role="main">
+                <p class="lead">Cám bạn đã mua code superS.</p>
+                <section>
+                    <h2 id="Installation">Cài đặt cho ứng dụng người dùng <small>Sau khi cài đặt, bạn có thể áp dụng điều tương tự trên ứng dụng Giao hàng nhanh chỉ cần bỏ qua cài đặt Plugin</small></h2>
+                    <p>Nó rất đơn giản để cài đặt. Chỉ cần làm theo bước dưới đây (linh hoạt giữa các bước) và bạn đã sẵn sàng để bắt đầu.</p>
+                    <ul>
+                        <li>Cài đặt cordova,Nodejs & ionic phiên bản mới nhất</li>
+                        <li><code>Quan trọng</code> Cài đặt phiên bản mới nhất của dự án trống ionic. Thay thế các tệp (<code>resources, src, ionic.config.json, config.xml</code>) đã tải xuống này trong thư mục gốc của dự án của bạn.</li>
+                        <h2 id="plugin">Cài đặt Platform & Plugin Bắt buộc </h2>
+                        <li>thêm Platform thiết bị android<code>ionic cordova platform add android</code></li>
+                        <li>thêm Platform thiết bị ios<code>ionic cordova platform add ios</code></li>
+                        <li>Cài đặt các Plugins bắt buộc:</li>
+                        <li><a href="https://ionicframework.com/docs/native/onesignal" target="_blank"><code>OneSignal</code></a></li>
+                        <li><a href="https://ionicframework.com/docs/native/geolocation" target="_blank"><code>Geolocation</code></a></li>
+                        <li><a href="https://ionicframework.com/docs/native/native-geocoder" target="_blank"><code>Geocoder</code></a></li>
+                        <li><a href="https://ionicframework.com/docs/native/paypal" target="_blank"><code>PayPal</code></a></li>
+                        <li><a href="https://ionicframework.com/docs/native/stripe" target="_blank"><code>Stripe Payment</code></a></li>
+                        <h2 id="run">Chạy thử ứng dụng</h2>
+                        <p>Bây giờ bạn đã sẵn sàng để chạy ứng dụng trong trình duyệt</p>
+                        <li>Chạy lệnh này trong terminal từ thư mục dự án của bạn <code>ionic serve</code></li>
+                        <li>Nếu yêu cầu cập nhật node-sass thì hãy chạy lệnh này <code>npm rebuild node-sass</code></li>
+                        <li>Thay đổi api URL trong src/app/service/server.server.ts với URL thay đổi và thêm /api/ phía sau đường dẫn url ví dụ https://www.abc.com/api/</li>
+                        <li>Ứng dụng đã sẵn sàng để chạy</li>
+                        <li>Nếu bạn muốn sử dụng paypal, hãy thay đổi ID khách hàng trong cài đặt ở trang quản trị & lưu thay đổi <code>PayPalEnvironmentSandbox</code> thành <code>PayPalEnvironmentProduction</code> trong file <code>src/app/checkout/checkout.ts</code></li>
+                    </ul>
+                    <h2 id="AppChange">Thay đổi Giao diện ứng dụng</h2>
+                    <ul>
+                        <li>Bạn có thể thay đổi biến màu trong file <code>src/theme/veriable.css</code> </li>
+                        <li>để thay đổi icon ứng dụng và hình splash lúc mở ứng dụng, bạn có thể thay file icon.png (1240x1240) & splash.png (2732x2732) trong thư mục resources và sử dụng câu lệnh <code>ionic cordova resources --icon</code> và <code>ionic cordova resources --splash</code></li>
+                        <li>Để thiết lập google map, bạn phải nhập Khóa API google map của mình vào file <code>src/index.html</code> trong app & file <code>local/resources/views/admin/user/google.blade.php</code> trong web</li>
+                        <li>Để thiết lập thông báo đẩy onesignal, thay đổi API trong <code>src/app/app.component.spec.ts</code> & trong file web <code>local/app/http/controller/controller.php</code></li>
+                    </ul>
+                    <h2 id="build">Build APK</h2>
+                    <ul>
+                        <li>Để build thành ứng dụng cho android<code>ionic cordova build android --prod --release</code></li>
+                        <li>Tạo signing key <code>keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000</code></li>
+                        <li>Để ký ứng dụng với keystore <code>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk alias_name</code></li>
+                        <li>Để đăng ký ứng dụng để xuất bản trong playstore <code>zipalign -v 4 superS-release-unsigned.apk superS.apk</code></li>
+                    </ul>
+                    <h2 id="api">Cài đặt API</h2>
+                    <ul>
+                        <li>Tải lên các tệp API lên máy chủ của bạn (yêu cầu phiên bản php >= 7.1)</li>
+                        <li>Thay đổi chi tiết Cơ sở dữ liệu trong file <code>.env</code> file nằm trong <code>thư mục local</code></li>
+                        <li>Từ file<code>.env</code> bạn cũng thay đổi chi tiết SMTP email.</li>
+                        <li>Thêm Google API KEY vào local/resources/view/admin/user/google.blade.php ở cuối file để lấy vị trí của google</li>
+                        <br><code><i class="fa fa-check"></i> Quá tuyệt! Bạn đã sẵn sàng. Chúc vui vẻ</code>
+                    </ul>
+                </section>
+                <section>
+                    <h2 id="Logins">Thông tin đăng nhập mặt định</h2>
+                    <ul>
+                        <li>Trang quản trị <code>/admin</code></li>
+                        <br>Tên đăng nhập = <code>admin</code><br>Mật khẩu = <code>admin123</code></li>
+                    </ul>
+                    <ul>
+                        <li>Đăng nhập cửa hàng với thư mục gốc</li>
+                    </ul>
+                    <ul>
+                        <li>Đăng nhập nhân viên giao hàng với <code>/staff</code></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 id="download">Tải về ứng dụng Demo dành cho Android</h2>
+                    <ul>
+                        <li>Ứng dụng dành cho người dùng<code>superS - Siêu thị sạch</code> - <a href="https://ssm.actcms.work/Docs/app/supers_app.apk">Tải về</a></li>
+                        <li>Ứng dụng dành cho đối tác giao hàng<code>Shiper - Giao hàng nhanh</code> - <a href="https://ssm.actcms.work/Docs/app/shiper_app.apk">Tải về</a></li>
+                        <li>Ứng dụng dành cho nhà hàng<code>Siêu thị sạch App</code> - <a href="https://ssm.actcms.work/Docs/app/supers_store.apk">Tải về</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 id="mua">Toàn bộ mã nguồn đã có sẵn</h2>
+                    <ul>
+                        <li>Toàn bộ mã nguồn đã có sẵn tại<code>https://sharecode.vn</code>  <a href="https://sharecode.vn/source-code/supers_sieu-thi-sach-ionic-ung-dung-giao-hang-thuc-pham-hang-tap-hoa-danh-cho-android-ios-voi-bang-dieu-khien-quan-tri-hoan-chinh-26783.htm">Mua ngay</a></li>
+                    </ul>
+                </section>
+
+
+                <h2>Cám ơn !</h2>
+                <h3>Đối với bất kỳ tùy chỉnh nào, hãy liên hệ với chúng tôi tại <code>actcms.work@gmail.com</code></h3>
+            </article>
+            <!-- END Main content -->
+        </div>
+    </main>
+    <!-- Scripts -->
+    <script src="assets/js/theDocs.all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
